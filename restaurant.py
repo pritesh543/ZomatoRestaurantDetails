@@ -119,10 +119,8 @@ def get_restaurants_in_collection(city_id, collection_d):
 if __name__ == "__main__":
     city_name="Indore"
     city_id=get_city_id(city_name)
-    print("city_id:", city_id)
     collection_ids=get_collections_in_city(city_id)
-    print("collection_ids:", collection_ids)
-
+    
     for collection_d in collection_ids:
         restaurantslist=get_restaurants_in_collection(city_id, collection_d)
         df=pd.DataFrame(restaurantslist)
